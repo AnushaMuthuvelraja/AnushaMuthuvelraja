@@ -10,36 +10,41 @@ public class FindTypes {
 		int letter =0,space =0,num =0,specialChar =0;
 		
 		char[] arr= test.toCharArray();
-		for(int i=0;i<arr[i]; i++)
+		int length =test.length();
+		for(int i=0;i<length; i++)
 		{
 			if(Character.isLetter(arr[i]))
 			{
-				System.out.print(arr[i]);
+				letter++;
+				
 			}
 			
-			
-		}
-		for(int i=0;i<arr[i]; i++)
-		{
-			
-			if(Character.isDigit(arr[i]))
+		
+			else if(Character.isDigit(arr[i]))
 					{
 				
-				System.out.println(arr[i]);
+				num++;
 					}
-		}
-		
-		for(int i=0;i<arr[i]; i++)
-		{
-			
-			if(Character.isSpaceChar(0))
+	
+			else if(Character.isSpaceChar(arr[i]))
 					{
 				
-				System.out.println(arr[i]);
+				space++;
 					}
+			
+			else
+		{
+			
+			specialChar++;
 		}
-		
-		System.out.println("letter" + letter);
+		}
+		System.out.println("letter=" + letter);
+		System.out.println("number=" + num);
+		System.out.println("space"+ space);
+		System.out.println("special Character=" + specialChar);
 	}
 
+
 }
+
+
